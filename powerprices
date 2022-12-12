@@ -15,17 +15,12 @@ const priceAreaCode = areaMapping[priceArea]
 const entsoeToken = process.env.ENTSOE_TOKEN
 
 __________________________
- var today = new Date();
-// var periodStart = today.toString. .format('YYYYMMDDHHmm')
-// var periodEnd = today.hour(23).format('YYYYMMDDHHmm')
+var today = new Date();
 var token = 'da395fcc-90e5-45bc-baf5-77cd4901d0a6'
 
 let year = today.getFullYear().toString();
-var month = (today.getMonth() + 1).toString();
-let day = today.getDate().toString();
-
-month = '0' + month.slice(-2);
-day = '0' + day.slice(-2);
+var month = (today.getMonth() + 1).toString().padStart(2, '0');;
+let day = today.getDate().toString().padStart(2, '0');;
 
 let periodStart = year + month + day + '0000';
 let periodEnd =  year + month + day + '2300';
